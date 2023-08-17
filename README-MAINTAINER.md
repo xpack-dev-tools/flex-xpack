@@ -489,7 +489,13 @@ These commands use the `xpack-develop` branch of this repo.
 
 ## Durations & results
 
-The builds take about 5 minutes to complete.
+The builds take about 0h24 to complete:
+
+- `xbbmi`: 0x10 (nuc)
+- `xbbma`: 0h07
+- `xbbli`: 0h05
+- `xbbla`: 0h24
+- `xbbla32`: 0h22
 
 The workflow result and logs are available from the
 [Actions](https://github.com/xpack-dev-tools/flex-xpack/actions/) page.
