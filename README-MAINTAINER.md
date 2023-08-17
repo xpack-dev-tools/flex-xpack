@@ -1,6 +1,6 @@
-[![license](https://img.shields.io/github/license/xpack-dev-tools/bison-xpack)](https://github.com/xpack-dev-tools/bison-xpack/blob/xpack/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/xpack-dev-tools/bison-xpack.svg)](https://github.com/xpack-dev-tools/bison-xpack/issues/)
-[![GitHub pulls](https://img.shields.io/github/issues-pr/xpack-dev-tools/bison-xpack.svg)](https://github.com/xpack-dev-tools/bison-xpack/pulls)
+[![license](https://img.shields.io/github/license/xpack-dev-tools/flex-xpack)](https://github.com/xpack-dev-tools/flex-xpack/blob/xpack/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/xpack-dev-tools/flex-xpack.svg)](https://github.com/xpack-dev-tools/flex-xpack/issues/)
+[![GitHub pulls](https://img.shields.io/github/issues-pr/xpack-dev-tools/flex-xpack.svg)](https://github.com/xpack-dev-tools/flex-xpack/pulls)
 
 # Maintainer info
 
@@ -38,32 +38,32 @@ npm install --location=global xpm@latest
 
 The project is hosted on GitHub:
 
-- <https://github.com/xpack-dev-tools/bison-xpack.git>
+- <https://github.com/xpack-dev-tools/flex-xpack.git>
 
 To clone the stable branch (`xpack`), run the following commands in a
 terminal (on Windows use the _Git Bash_ console):
 
 ```sh
-rm -rf ~/Work/xpack-dev-tools/bison-xpack.git && \
-git clone https://github.com/xpack-dev-tools/bison-xpack.git \
-  ~/Work/xpack-dev-tools/bison-xpack.git
+rm -rf ~/Work/xpack-dev-tools/flex-xpack.git && \
+git clone https://github.com/xpack-dev-tools/flex-xpack.git \
+  ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
 For development purposes, clone the `xpack-develop` branch:
 
 ```sh
-rm -rf ~/Work/xpack-dev-tools/bison-xpack.git && \
+rm -rf ~/Work/xpack-dev-tools/flex-xpack.git && \
 mkdir -p ~/Work/xpack-dev-tools && \
 git clone \
   --branch xpack-develop \
-  https://github.com/xpack-dev-tools/bison-xpack.git \
-  ~/Work/xpack-dev-tools/bison-xpack.git
+  https://github.com/xpack-dev-tools/flex-xpack.git \
+  ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
 Or, if the repo was already cloned:
 
 ```sh
-git -C ~/Work/xpack-dev-tools/bison-xpack.git pull
+git -C ~/Work/xpack-dev-tools/flex-xpack.git pull
 ```
 
 ## Get helper sources
@@ -84,13 +84,13 @@ xpm link -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git
 Or, if the repo was already cloned:
 
 ```sh
-git -C ~/Work/xpack-dev-tools/bison-xpack.git pull
+git -C ~/Work/xpack-dev-tools/flex-xpack.git pull
 ```
 
 ## Release schedule
 
-The xPack GNU bison release schedule generally follows the original GNU
-[releases](https://ftp.gnu.org/gnu/bison/).
+The xPack GNU flex release schedule generally follows the original GNU
+[releases](https://github.com/westes/flex/releases).
 
 ## How to make new releases
 
@@ -99,7 +99,7 @@ Before starting the build, perform some checks and tweaks.
 ### Download the build scripts
 
 The build scripts are available in the `scripts` folder of the
-[`xpack-dev-tools/bison-xpack`](https://github.com/xpack-dev-tools/bison-xpack)
+[`xpack-dev-tools/flex-xpack`](https://github.com/xpack-dev-tools/flex-xpack)
 Git repo.
 
 To download them on a new machine, clone the `xpack-develop` branch,
@@ -107,7 +107,7 @@ as seen above.
 
 ### Check Git
 
-In the `xpack-dev-tools/bison-xpack` Git repo:
+In the `xpack-dev-tools/flex-xpack` Git repo:
 
 - switch to the `xpack-develop` branch
 - pull new changes
@@ -115,13 +115,13 @@ In the `xpack-dev-tools/bison-xpack` Git repo:
 
 ### Check the latest upstream release
 
-Check the GNU bison [releases](https://ftp.gnu.org/gnu/bison/)
-and compare the the xPack [Releases](https://github.com/xpack-dev-tools/bison-xpack/releases/).
+Check the GNU flex [releases](https://github.com/westes/flex/releases)
+and compare the the xPack [Releases](https://github.com/xpack-dev-tools/flex-xpack/releases/).
 
 ### Increase the version
 
-Determine the version (like `3.8.2`) and update the `scripts/VERSION`
-file; the format is `3.8.2-1`. The fourth number is the xPack release number
+Determine the version (like `2.6.4`) and update the `scripts/VERSION`
+file; the format is `2.6.4-1`. The fourth number is the xPack release number
 of this version. A fifth number will be added when publishing
 the package on the `npm` server.
 
@@ -129,9 +129,9 @@ the package on the `npm` server.
 
 Check GitHub issues and pull requests:
 
-- <https://github.com/xpack-dev-tools/bison-xpack/issues/>
+- <https://github.com/xpack-dev-tools/flex-xpack/issues/>
 
-and fix them; assign them to a milestone (like `3.8.2-1`).
+and fix them; assign them to a milestone (like `2.6.4-1`).
 
 ### Check `README.md`
 
@@ -152,8 +152,8 @@ Use a new version, suffixed by `.pre`.
 
 - open the `CHANGELOG.md` file
 - check if all previous fixed issues are in
-- add a new entry like _* v3.8.2-1 prepared_
-- commit with a message like _prepare v3.8.2-1_
+- add a new entry like _* v2.6.4-1 prepared_
+- commit with a message like _prepare v2.6.4-1_
 
 ### Merge upstream repo
 
@@ -187,25 +187,25 @@ For Intel macOS, first run the build on the development machine
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/xpack-dev-tools/bison-xpack.git pull
+git -C ~/Work/xpack-dev-tools/flex-xpack.git pull
 
-xpm run install -C ~/Work/xpack-dev-tools/bison-xpack.git
+xpm run install -C ~/Work/xpack-dev-tools/flex-xpack.git
 
 git -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git pull
 xpm run link-deps -C ~/Work/xpack-dev-tools/cmake-xpack.git
 
 # For backup overhead reasons, on the development machine
 # the builds happen on a separate Work folder.
-rm -rf ~/Work/xpack-dev-tools-build/bison-[0-9]*-*
+rm -rf ~/Work/xpack-dev-tools-build/flex-[0-9]*-*
 
-xpm install --config darwin-x64 -C ~/Work/xpack-dev-tools/bison-xpack.git
-xpm run build-develop --config darwin-x64 -C ~/Work/xpack-dev-tools/bison-xpack.git
+xpm install --config darwin-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git
+xpm run build-develop --config darwin-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
 For a debug build:
 
 ```sh
-xpm run build-develop-debug --config darwin-x64 -C ~/Work/xpack-dev-tools/bison-xpack.git
+xpm run build-develop-debug --config darwin-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
 The build takes a few minutes.
@@ -223,24 +223,24 @@ caffeinate ssh xbbmi
 Repeat the same steps as before.
 
 ```sh
-git -C ~/Work/xpack-dev-tools/bison-xpack.git pull && \
-xpm run install -C ~/Work/xpack-dev-tools/bison-xpack.git && \
+git -C ~/Work/xpack-dev-tools/flex-xpack.git pull && \
+xpm run install -C ~/Work/xpack-dev-tools/flex-xpack.git && \
 git -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git && \
-xpm run link-deps -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm run deep-clean --config darwin-x64  -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm install --config darwin-x64 -C ~/Work/xpack-dev-tools/bison-xpack.git
-xpm run build-develop --config darwin-x64 -C ~/Work/xpack-dev-tools/bison-xpack.git
+xpm run link-deps -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm run deep-clean --config darwin-x64  -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm install --config darwin-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git
+xpm run build-develop --config darwin-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
-$ ls -l ~/Work/xpack-dev-tools/bison-xpack.git/build/darwin-x64/deploy
+$ ls -l ~/Work/xpack-dev-tools/flex-xpack.git/build/darwin-x64/deploy
 total 3096
--rw-r--r--  1 ilg  staff  1579537 Aug 17 07:08 xpack-bison-3.8.2-1-darwin-x64.tar.gz
--rw-r--r--  1 ilg  staff      104 Aug 17 07:08 xpack-bison-3.8.2-1-darwin-x64.tar.gz.sha
+-rw-r--r--  1 ilg  staff  1579537 Aug 17 07:08 xpack-flex-2.6.4-1-darwin-x64.tar.gz
+-rw-r--r--  1 ilg  staff      104 Aug 17 07:08 xpack-flex-2.6.4-1-darwin-x64.tar.gz.sha
 ```
 
 #### Apple Silicon macOS
@@ -256,24 +256,24 @@ caffeinate ssh xbbma
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/xpack-dev-tools/bison-xpack.git pull && \
-xpm run install -C ~/Work/xpack-dev-tools/bison-xpack.git && \
+git -C ~/Work/xpack-dev-tools/flex-xpack.git pull && \
+xpm run install -C ~/Work/xpack-dev-tools/flex-xpack.git && \
 git -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git && \
-xpm run link-deps -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm run deep-clean --config darwin-arm64  -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm install --config darwin-arm64 -C ~/Work/xpack-dev-tools/bison-xpack.git
-xpm run build-develop --config darwin-arm64 -C ~/Work/xpack-dev-tools/bison-xpack.git
+xpm run link-deps -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm run deep-clean --config darwin-arm64  -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm install --config darwin-arm64 -C ~/Work/xpack-dev-tools/flex-xpack.git
+xpm run build-develop --config darwin-arm64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
-$ ls -l ~/Work/xpack-dev-tools/bison-xpack.git/build/darwin-arm64/deploy
+$ ls -l ~/Work/xpack-dev-tools/flex-xpack.git/build/darwin-arm64/deploy
 total 3072
--rw-r--r--  1 ilg  staff  1566442 Aug 17 07:08 xpack-bison-3.8.2-1-darwin-arm64.tar.gz
--rw-r--r--  1 ilg  staff      106 Aug 17 07:08 xpack-bison-3.8.2-1-darwin-arm64.tar.gz.sha
+-rw-r--r--  1 ilg  staff  1566442 Aug 17 07:08 xpack-flex-2.6.4-1-darwin-arm64.tar.gz
+-rw-r--r--  1 ilg  staff      106 Aug 17 07:08 xpack-flex-2.6.4-1-darwin-arm64.tar.gz.sha
 ```
 
 #### Intel GNU/Linux
@@ -290,25 +290,25 @@ caffeinate ssh xbbli
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/xpack-dev-tools/bison-xpack.git pull && \
-xpm run install -C ~/Work/xpack-dev-tools/bison-xpack.git && \
+git -C ~/Work/xpack-dev-tools/flex-xpack.git pull && \
+xpm run install -C ~/Work/xpack-dev-tools/flex-xpack.git && \
 git -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git && \
-xpm run link-deps -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm run deep-clean --config linux-x64 -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm run docker-prepare --config linux-x64 -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm run docker-link-deps --config linux-x64 -C ~/Work/xpack-dev-tools/bison-xpack.git
-xpm run docker-build-develop --config linux-x64 -C ~/Work/xpack-dev-tools/bison-xpack.git
+xpm run link-deps -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm run deep-clean --config linux-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm run docker-prepare --config linux-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm run docker-link-deps --config linux-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git
+xpm run docker-build-develop --config linux-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
-$ ls -l ~/Work/xpack-dev-tools/bison-xpack.git/build/linux-x64/deploy
+$ ls -l ~/Work/xpack-dev-tools/flex-xpack.git/build/linux-x64/deploy
 total 1584
--rw-r--r-- 1 ilg ilg 1615614 Aug 17 04:08 xpack-bison-3.8.2-1-linux-x64.tar.gz
--rw-r--r-- 1 ilg ilg     103 Aug 17 04:08 xpack-bison-3.8.2-1-linux-x64.tar.gz.sha
+-rw-r--r-- 1 ilg ilg 1615614 Aug 17 04:08 xpack-flex-2.6.4-1-linux-x64.tar.gz
+-rw-r--r-- 1 ilg ilg     103 Aug 17 04:08 xpack-flex-2.6.4-1-linux-x64.tar.gz.sha
 ```
 
 ##### Build the Windows binaries
@@ -327,25 +327,25 @@ caffeinate ssh xbbla
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/xpack-dev-tools/bison-xpack.git pull && \
-xpm run install -C ~/Work/xpack-dev-tools/bison-xpack.git && \
+git -C ~/Work/xpack-dev-tools/flex-xpack.git pull && \
+xpm run install -C ~/Work/xpack-dev-tools/flex-xpack.git && \
 git -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git && \
-xpm run link-deps -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm run deep-clean --config linux-arm64 -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm run docker-prepare --config linux-arm64 -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm run docker-link-deps --config linux-arm64 -C ~/Work/xpack-dev-tools/bison-xpack.git
-xpm run docker-build-develop --config linux-arm64 -C ~/Work/xpack-dev-tools/bison-xpack.git
+xpm run link-deps -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm run deep-clean --config linux-arm64 -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm run docker-prepare --config linux-arm64 -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm run docker-link-deps --config linux-arm64 -C ~/Work/xpack-dev-tools/flex-xpack.git
+xpm run docker-build-develop --config linux-arm64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
-$ ls -l ~/Work/xpack-dev-tools/bison-xpack.git/build/linux-arm64/deploy
+$ ls -l ~/Work/xpack-dev-tools/flex-xpack.git/build/linux-arm64/deploy
 total 1576
--rw-r--r-- 1 ilg ilg 1605729 Aug 17 04:13 xpack-bison-3.8.2-1-linux-arm64.tar.gz
--rw-r--r-- 1 ilg ilg     105 Aug 17 04:13 xpack-bison-3.8.2-1-linux-arm64.tar.gz.sha
+-rw-r--r-- 1 ilg ilg 1605729 Aug 17 04:13 xpack-flex-2.6.4-1-linux-arm64.tar.gz
+-rw-r--r-- 1 ilg ilg     105 Aug 17 04:13 xpack-flex-2.6.4-1-linux-arm64.tar.gz.sha
 ```
 
 #### Arm GNU/Linux 32-bit
@@ -360,25 +360,25 @@ caffeinate ssh xbbla32
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/xpack-dev-tools/bison-xpack.git pull && \
-xpm run install -C ~/Work/xpack-dev-tools/bison-xpack.git && \
+git -C ~/Work/xpack-dev-tools/flex-xpack.git pull && \
+xpm run install -C ~/Work/xpack-dev-tools/flex-xpack.git && \
 git -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git && \
-xpm run link-deps -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm run deep-clean --config linux-arm -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm run docker-prepare --config linux-arm -C ~/Work/xpack-dev-tools/bison-xpack.git && \
-xpm run docker-link-deps --config linux-arm -C ~/Work/xpack-dev-tools/bison-xpack.git
-xpm run docker-build-develop --config linux-arm -C ~/Work/xpack-dev-tools/bison-xpack.git
+xpm run link-deps -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm run deep-clean --config linux-arm -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm run docker-prepare --config linux-arm -C ~/Work/xpack-dev-tools/flex-xpack.git && \
+xpm run docker-link-deps --config linux-arm -C ~/Work/xpack-dev-tools/flex-xpack.git
+xpm run docker-build-develop --config linux-arm -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
-$ ls -l ~/Work/xpack-dev-tools/bison-xpack.git/build/linux-arm/deploy
+$ ls -l ~/Work/xpack-dev-tools/flex-xpack.git/build/linux-arm/deploy
 total 1556
--rw-r--r-- 1 ilg ilg 1587221 Aug 17 04:13 xpack-bison-3.8.2-1-linux-arm.tar.gz
--rw-r--r-- 1 ilg ilg     103 Aug 17 04:13 xpack-bison-3.8.2-1-linux-arm.tar.gz.sha
+-rw-r--r-- 1 ilg ilg 1587221 Aug 17 04:13 xpack-flex-2.6.4-1-linux-arm.tar.gz
+-rw-r--r-- 1 ilg ilg     103 Aug 17 04:13 xpack-flex-2.6.4-1-linux-arm.tar.gz.sha
 ```
 
 ### Build a debug version
@@ -472,17 +472,17 @@ To trigger the GitHub Actions build, use the xPack action:
 This is equivalent to:
 
 ```sh
-bash ~/Work/xpack-dev-tools/bison-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbmi
-bash ~/Work/xpack-dev-tools/bison-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbma
-bash ~/Work/xpack-dev-tools/bison-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbli
-bash ~/Work/xpack-dev-tools/bison-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla
-bash ~/Work/xpack-dev-tools/bison-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla32
+bash ~/Work/xpack-dev-tools/flex-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbmi
+bash ~/Work/xpack-dev-tools/flex-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbma
+bash ~/Work/xpack-dev-tools/flex-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbli
+bash ~/Work/xpack-dev-tools/flex-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla
+bash ~/Work/xpack-dev-tools/flex-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla32
 ```
 
 These scripts require the `GITHUB_API_DISPATCH_TOKEN` variable to be present
 in the environment, and the organization `PUBLISH_TOKEN` to be visible in the
 Settings → Action →
-[Secrets](https://github.com/xpack-dev-tools/bison-xpack/settings/secrets/actions)
+[Secrets](https://github.com/xpack-dev-tools/flex-xpack/settings/secrets/actions)
 page.
 
 These commands use the `xpack-develop` branch of this repo.
@@ -492,7 +492,7 @@ These commands use the `xpack-develop` branch of this repo.
 The builds take about 5 minutes to complete.
 
 The workflow result and logs are available from the
-[Actions](https://github.com/xpack-dev-tools/bison-xpack/actions/) page.
+[Actions](https://github.com/xpack-dev-tools/flex-xpack/actions/) page.
 
 The resulting binaries are available for testing from
 [pre-releases/test](https://github.com/xpack-dev-tools/pre-releases/releases/tag/test/).
@@ -512,9 +512,9 @@ To trigger the GitHub Actions tests, use the xPack actions:
 These are equivalent to:
 
 ```sh
-bash ~/Work/xpack-dev-tools/bison-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-test-prime.sh
-bash ~/Work/xpack-dev-tools/bison-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-test-docker-linux-intel.sh
-bash ~/Work/xpack-dev-tools/bison-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-test-docker-linux-arm.sh
+bash ~/Work/xpack-dev-tools/flex-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-test-prime.sh
+bash ~/Work/xpack-dev-tools/flex-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-test-docker-linux-intel.sh
+bash ~/Work/xpack-dev-tools/flex-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-workflow-test-docker-linux-arm.sh
 ```
 
 These scripts require the `GITHUB_API_DISPATCH_TOKEN` variable to be present
@@ -525,7 +525,7 @@ These actions use the `xpack-develop` branch of this repo and the
 binaries.
 
 The tests results are available from the
-[Actions](https://github.com/xpack-dev-tools/bison-xpack/actions/) page.
+[Actions](https://github.com/xpack-dev-tools/flex-xpack/actions/) page.
 
 Since GitHub Actions provides a single version of macOS, the
 multi-version macOS tests run on Travis.
@@ -537,14 +537,14 @@ To trigger the Travis test, use the xPack action:
 This is equivalent to:
 
 ```sh
-bash ~/Work/xpack-dev-tools/bison-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-travis-macos.sh
+bash ~/Work/xpack-dev-tools/flex-xpack.git/xpacks/@xpack-dev-tools/xbb-helper/github-actions/trigger-travis-macos.sh
 ```
 
 This script requires the `TRAVIS_COM_TOKEN` variable to be present
 in the environment.
 
 The test results are available from
-[Travis CI](https://app.travis-ci.com/github/xpack-dev-tools/bison-xpack/builds/).
+[Travis CI](https://app.travis-ci.com/github/xpack-dev-tools/flex-xpack/builds/).
 
 ### Manual tests
 
@@ -552,9 +552,9 @@ To download the pre-released archive for the specific platform
 and run the tests, use:
 
 ```sh
-git -C ~/Work/xpack-dev-tools/bison-xpack.git pull
-xpm run install -C ~/Work/xpack-dev-tools/bison-xpack.git
-xpm run test-pre-release -C ~/Work/xpack-dev-tools/bison-xpack.git
+git -C ~/Work/xpack-dev-tools/flex-xpack.git pull
+xpm run install -C ~/Work/xpack-dev-tools/flex-xpack.git
+xpm run test-pre-release -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
 For even more tests, on each platform (MacOS, GNU/Linux, Windows),
@@ -571,26 +571,25 @@ xattr -cr ${HOME}/Downloads/xpack-*
 On GNU/Linux and macOS systems, use:
 
 ```sh
-.../xpack-bison-3.8.2-1/bin/bison --version
-bison (GNU Bison) 3.8.2
-Written by Robert Corbett and Richard Stallman.
+.../xpack-flex-2.6.4-1/bin/flex --version
+flex 2.6.4
 ```
 
 ## Create a new GitHub pre-release draft
 
-- in `CHANGELOG.md`, add the release date and a message like _* v3.8.2-1 released_
+- in `CHANGELOG.md`, add the release date and a message like _* v2.6.4-1 released_
 - commit with _CHANGELOG update_
 - check and possibly update the `templates/body-github-release-liquid.md`
 - push the `xpack-develop` branch
 - run the xPack action `trigger-workflow-publish-release`
 
 The workflow result and logs are available from the
-[Actions](https://github.com/xpack-dev-tools/bison-xpack/actions/) page.
+[Actions](https://github.com/xpack-dev-tools/flex-xpack/actions/) page.
 
 The result is a
-[draft pre-release](https://github.com/xpack-dev-tools/bison-xpack/releases/)
-tagged like **v3.8.2-1** (mind the dash in the middle!) and
-named like **xPack GNU bison v3.8.2-1** (mind the dash),
+[draft pre-release](https://github.com/xpack-dev-tools/flex-xpack/releases/)
+tagged like **v2.6.4-1** (mind the dash in the middle!) and
+named like **xPack GNU flex v2.6.4-1** (mind the dash),
 with all binaries attached.
 
 - edit the draft and attach it to the `xpack-develop` branch (important!)
@@ -605,24 +604,24 @@ on the Desktop.
 In the `xpack/web-jekyll` GitHub repo:
 
 - select the `develop` branch
-- copy the new file to `_posts/releases/bison`
+- copy the new file to `_posts/releases/flex`
 - update version and date from last
-[release](https://ftp.gnu.org/gnu/bison/).
+[release](https://github.com/westes/flex/releases).
 
 If any, refer to closed
-[issues](https://github.com/xpack-dev-tools/bison-xpack/issues/).
+[issues](https://github.com/xpack-dev-tools/flex-xpack/issues/).
 
 ## Update the preview Web
 
 - commit the `develop` branch of `xpack/web-jekyll` GitHub repo;
-  use a message like _xPack GNU bison v3.8.2-1 released_
+  use a message like _xPack GNU flex v2.6.4-1 released_
 - push to GitHub
 - wait for the GitHub Pages build to complete
 - the preview web is <https://xpack.github.io/web-preview/news/>
 
 ## Create the pre-release
 
-- go to the GitHub [Releases](https://github.com/xpack-dev-tools/bison-xpack/releases/) page
+- go to the GitHub [Releases](https://github.com/xpack-dev-tools/flex-xpack/releases/) page
 - perform the final edits and check if everything is fine
 - temporarily fill in the _Continue Reading »_ with the URL of the
   web-preview release
@@ -657,18 +656,18 @@ watching this project.
 - compare the SHA sums with those shown by `cat *.sha`
 - check the executable names
 - commit all changes, use a message like
-  _package.json: update urls for 3.8.2-1.1 release_ (without _v_)
+  _package.json: update urls for 2.6.4-1.1 release_ (without _v_)
 
 ## Publish on the npmjs.com server
 
 - select the `xpack-develop` branch
 - check the latest commits `npm run git-log`
-- update `CHANGELOG.md`, add a line like _* v3.8.2-1.1 published on npmjs.com_
-- commit with a message like _CHANGELOG: publish npm v3.8.2-1.1_
+- update `CHANGELOG.md`, add a line like _* v2.6.4-1.1 published on npmjs.com_
+- commit with a message like _CHANGELOG: publish npm v2.6.4-1.1_
 - `npm pack` and check the content of the archive, which should list
   only the `package.json`, the `README.md`, `LICENSE` and `CHANGELOG.md`;
   possibly adjust `.npmignore`
-- `npm version 3.8.2-1.1`; the first 4 numbers are the same as the
+- `npm version 2.6.4-1.1`; the first 4 numbers are the same as the
   GitHub release; the fifth number is the npm specific version
 - the commits and the tag should have been pushed by the `postversion` script;
   if not, push them with `git push origin --tags`
@@ -677,7 +676,7 @@ watching this project.
 
 After a few moments the version will be visible at:
 
-- <https://www.npmjs.com/package/@xpack-dev-tools/bison?activeTab=versions>
+- <https://www.npmjs.com/package/@xpack-dev-tools/flex?activeTab=versions>
 
 ## Test if the binaries can be installed with xpm
 
@@ -685,7 +684,7 @@ Run the xPack action `trigger-workflow-test-xpm`, this
 will install the package via `xpm install` on all supported platforms.
 
 The tests results are available from the
-[Actions](https://github.com/xpack-dev-tools/bison-xpack/actions/) page.
+[Actions](https://github.com/xpack-dev-tools/flex-xpack/actions/) page.
 
 ## Update the repo
 
@@ -696,13 +695,13 @@ The tests results are available from the
 
 When the release is considered stable, promote it as `latest`:
 
-- `npm dist-tag ls @xpack-dev-tools/bison`
-- `npm dist-tag add @xpack-dev-tools/bison@3.8.2-1.1 latest`
-- `npm dist-tag ls @xpack-dev-tools/bison`
+- `npm dist-tag ls @xpack-dev-tools/flex`
+- `npm dist-tag add @xpack-dev-tools/flex@2.6.4-1.1 latest`
+- `npm dist-tag ls @xpack-dev-tools/flex`
 
 In case the previous version is not functional and needs to be unpublished:
 
-- `npm unpublish @xpack-dev-tools/bison@3.8.2-1.1`
+- `npm unpublish @xpack-dev-tools/flex@2.6.4-1.1`
 
 ## Update the Web
 
@@ -713,7 +712,7 @@ In case the previous version is not functional and needs to be unpublished:
 
 ## Create the final GitHub release
 
-- go to the GitHub [Releases](https://github.com/xpack-dev-tools/bison-xpack/releases/) page
+- go to the GitHub [Releases](https://github.com/xpack-dev-tools/flex-xpack/releases/) page
 - check the download counter, it should match the number of tests
 - add a link to the Web page `[Continue reading »]()`; use an same blog URL
 - remove the _tests only_ notice
@@ -724,14 +723,14 @@ In case the previous version is not functional and needs to be unpublished:
 
 - in a separate browser windows, open [TweetDeck](https://tweetdeck.twitter.com/)
 - using the `@xpack_project` account
-- paste the release name like **xPack GNU bison v3.8.2-1 released**
+- paste the release name like **xPack GNU flex v2.6.4-1 released**
 - paste the link to the Web page
-  [release](https://xpack.github.io/bison/releases/)
+  [release](https://xpack.github.io/flex/releases/)
 - click the **Tweet** button
 
 ## Check SourceForge mirror
 
-- <https://sourceforge.net/projects/bison-xpack/files/>
+- <https://sourceforge.net/projects/flex-xpack/files/>
 
 ## Remove the pre-release binaries
 
@@ -744,4 +743,4 @@ Run the xPack action `trigger-workflow-deep-clean`, this
 will remove the build folders on all supported platforms.
 
 The results are available from the
-[Actions](https://github.com/xpack-dev-tools/bison-xpack/actions/) page.
+[Actions](https://github.com/xpack-dev-tools/flex-xpack/actions/) page.

@@ -1,12 +1,12 @@
 
-[![GitHub package.json version](https://img.shields.io/github/package-json/v/xpack-dev-tools/bison-xpack)](https://github.com/xpack-dev-tools/bison-xpack/blob/xpack/package.json)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/xpack-dev-tools/bison-xpack)](https://github.com/xpack-dev-tools/bison-xpack/releases/)
-[![npm (scoped)](https://img.shields.io/npm/v/@xpack-dev-tools/bison.svg?color=blue)](https://www.npmjs.com/package/@xpack-dev-tools/bison/)
-[![license](https://img.shields.io/github/license/xpack-dev-tools/bison-xpack)](https://github.com/xpack-dev-tools/bison-xpack/blob/xpack/LICENSE)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/xpack-dev-tools/flex-xpack)](https://github.com/xpack-dev-tools/flex-xpack/blob/xpack/package.json)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/xpack-dev-tools/flex-xpack)](https://github.com/xpack-dev-tools/flex-xpack/releases/)
+[![npm (scoped)](https://img.shields.io/npm/v/@xpack-dev-tools/flex.svg?color=blue)](https://www.npmjs.com/package/@xpack-dev-tools/flex/)
+[![license](https://img.shields.io/github/license/xpack-dev-tools/flex-xpack)](https://github.com/xpack-dev-tools/flex-xpack/blob/xpack/LICENSE)
 
-# The xPack GNU bison
+# The xPack GNU flex
 
-A standalone cross-platform (macOS/Linux) **GNU bison**
+A standalone cross-platform (macOS/Linux) **GNU flex**
 binary distribution, intended for reproducible builds.
 
 The main target is macOS 10.13, whose older version of this utility
@@ -18,12 +18,12 @@ this project also includes the build scripts.
 ## Overview
 
 This open source project is hosted on GitHub as
-[`xpack-dev-tools/bison-xpack`](https://github.com/xpack-dev-tools/bison-xpack)
+[`xpack-dev-tools/flex-xpack`](https://github.com/xpack-dev-tools/flex-xpack)
 and provides the platform specific binaries for the
-[xPack GNU bison](https://xpack.github.io/bison/).
+[xPack GNU flex](https://xpack.github.io/flex/).
 
 This distribution follows the official
-[GNU bison](https://www.gnu.org/software/bison/) releases.
+[GNU flex](https://www.gnu.org/software/flex/) releases.
 
 The binaries can be installed automatically as **binary xPacks** or manually as
 **portable archives**.
@@ -37,13 +37,13 @@ more weeks to get the latest patch release.
 ## User info
 
 This section is intended as a shortcut for those who plan
-to use the GNU bison binaries. For full details please read the
-[xPack GNU bison](https://xpack.github.io/bison/) pages.
+to use the GNU flex binaries. For full details please read the
+[xPack GNU flex](https://xpack.github.io/flex/) pages.
 
 ### Easy install
 
-The easiest way to install GNU bison is using the **binary xPack**, available as
-[`@xpack-dev-tools/bison`](https://www.npmjs.com/package/@xpack-dev-tools/bison)
+The easiest way to install GNU flex is using the **binary xPack**, available as
+[`@xpack-dev-tools/flex`](https://www.npmjs.com/package/@xpack-dev-tools/flex)
 from the [`npmjs.com`](https://www.npmjs.com) registry.
 
 #### Prerequisites
@@ -73,7 +73,7 @@ a development dependency for a project is quite easy:
 cd my-project
 xpm init # Add a package.json if not already present
 
-xpm install @xpack-dev-tools/bison@latest --verbose
+xpm install @xpack-dev-tools/flex@latest --verbose
 
 ls -l xpacks/.bin
 ```
@@ -94,28 +94,33 @@ This location is configurable via the environment variable
 `XPACKS_STORE_FOLDER`; for more details please check the
 [xpm folders](https://xpack.github.io/xpm/folders/) page.
 
-It is also possible to install GNU bison globally, in the user home folder:
+It is also possible to install GNU flex globally, in the user home folder:
 
 ```sh
-xpm install --global @xpack-dev-tools/bison@latest --verbose
+xpm install --global @xpack-dev-tools/flex@latest --verbose
 ```
 
 After install, the package should create a structure like this (macOS files;
 only the first two depth levels are shown):
 
 ```console
-$ tree -L 2 /Users/ilg/Library/xPacks/\@xpack-dev-tools/bison/3.8.2-1.1/.content/
-/Users/ilg/Library/xPacks/\@xpack-dev-tools/bison/3.8.2-1.1/.content/
+$ tree -L 2 /Users/ilg/Library/xPacks/\@xpack-dev-tools/flex/2.6.4-1.1/.content/
+/Users/ilg/Library/xPacks/\@xpack-dev-tools/flex/2.6.4-1.1/.content/
 ├── README.md
 ├── bin
-│   ├── gsed -> bison
-│   └── bison
-└── distro-info
-    ├── CHANGELOG.md
-    ├── licenses
-    └── scripts
+│   ├── bison
+│   └── yacc
+├── distro-info
+│   ├── CHANGELOG.md
+│   ├── licenses
+│   └── scripts
+├── libexec
+│   └── libiconv.2.dylib
+└── share
+    ├── aclocal
+    └── bison
 
-4 directories, 4 files
+9 directories, 5 files
 ```
 
 No other files are installed in any system folders or other locations.
@@ -131,54 +136,54 @@ To remove the links created by xpm in the current project:
 ```sh
 cd my-project
 
-xpm uninstall @xpack-dev-tools/bison
+xpm uninstall @xpack-dev-tools/flex
 ```
 
 To completely remove the package from the central xPack store:
 
 ```sh
-xpm uninstall --global @xpack-dev-tools/bison
+xpm uninstall --global @xpack-dev-tools/flex
 ```
 
 ### Manual install
 
-For all platforms, the **xPack GNU bison**
+For all platforms, the **xPack GNU flex**
 binaries are released as portable
 archives that can be installed in any location.
 
 The archives can be downloaded from the
-GitHub [Releases](https://github.com/xpack-dev-tools/bison-xpack/releases/)
+GitHub [Releases](https://github.com/xpack-dev-tools/flex-xpack/releases/)
 page.
 
 For more details please read the
-[Install](https://xpack.github.io/bison/install/) page.
+[Install](https://xpack.github.io/flex/install/) page.
 
 ### Versioning
 
-The version strings used by the GNU bison project are three number strings
-like `3.8.2`, which looks like semver;
+The version strings used by the GNU flex project are three number strings
+like `2.6.4`, which looks like semver;
 to this string the xPack distribution adds a four number,
 but since semver allows only three numbers, all additional ones can
 be added only as pre-release strings, separated by a dash,
-like `3.8.2-1`. When published as a npm package, the version gets
-a fifth number, like `3.8.2-1.1`.
+like `2.6.4-1`. When published as a npm package, the version gets
+a fifth number, like `2.6.4-1.1`.
 
 Since adherence of third party packages to semver is not guaranteed,
-it is recommended to use semver expressions like `^3.8.2` and `~3.8.2`
-with caution, and prefer exact matches, like `3.8.2-1.1`.
+it is recommended to use semver expressions like `^2.6.4` and `~2.6.4`
+with caution, and prefer exact matches, like `2.6.4-1.1`.
 
 ## Maintainer info
 
 For maintainer info, please see the
-[README-MAINTAINER](https://github.com/xpack-dev-tools/bison-xpack/blob/xpack/README-MAINTAINER.md).
+[README-MAINTAINER](https://github.com/xpack-dev-tools/flex-xpack/blob/xpack/README-MAINTAINER.md).
 
 ## Support
 
 The quick advice for getting support is to use the GitHub
-[Discussions](https://github.com/xpack-dev-tools/bison-xpack/discussions/).
+[Discussions](https://github.com/xpack-dev-tools/flex-xpack/discussions/).
 
 For more details please read the
-[Support](https://xpack.github.io/bison/support/) page.
+[Support](https://xpack.github.io/flex/support/) page.
 
 ## License
 
@@ -193,16 +198,16 @@ corresponding licenses are available in the installed
 
 ## Download analytics
 
-- GitHub [`xpack-dev-tools/bison-xpack`](https://github.com/xpack-dev-tools/bison-xpack/) repo
+- GitHub [`xpack-dev-tools/flex-xpack`](https://github.com/xpack-dev-tools/flex-xpack/) repo
   - latest xPack release
-[![Github All Releases](https://img.shields.io/github/downloads/xpack-dev-tools/bison-xpack/latest/total.svg)](https://github.com/xpack-dev-tools/bison-xpack/releases/)
-  - all xPack releases [![Github All Releases](https://img.shields.io/github/downloads/xpack-dev-tools/bison-xpack/total.svg)](https://github.com/xpack-dev-tools/bison-xpack/releases/)
-  - [individual file counters](https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&repository=bison-xpack) (grouped per release)
-- npmjs.com [`@xpack-dev-tools/bison`](https://www.npmjs.com/package/@xpack-dev-tools/bison/) xPack
+[![Github All Releases](https://img.shields.io/github/downloads/xpack-dev-tools/flex-xpack/latest/total.svg)](https://github.com/xpack-dev-tools/flex-xpack/releases/)
+  - all xPack releases [![Github All Releases](https://img.shields.io/github/downloads/xpack-dev-tools/flex-xpack/total.svg)](https://github.com/xpack-dev-tools/flex-xpack/releases/)
+  - [individual file counters](https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&repository=flex-xpack) (grouped per release)
+- npmjs.com [`@xpack-dev-tools/flex`](https://www.npmjs.com/package/@xpack-dev-tools/flex/) xPack
   - latest release, per month
-[![npm (scoped)](https://img.shields.io/npm/v/@xpack-dev-tools/bison.svg)](https://www.npmjs.com/package/@xpack-dev-tools/bison/)
-[![npm](https://img.shields.io/npm/dm/@xpack-dev-tools/bison.svg)](https://www.npmjs.com/package/@xpack-dev-tools/bison/)
-  - all releases [![npm](https://img.shields.io/npm/dt/@xpack-dev-tools/bison.svg)](https://www.npmjs.com/package/@xpack-dev-tools/bison/)
+[![npm (scoped)](https://img.shields.io/npm/v/@xpack-dev-tools/flex.svg)](https://www.npmjs.com/package/@xpack-dev-tools/flex/)
+[![npm](https://img.shields.io/npm/dm/@xpack-dev-tools/flex.svg)](https://www.npmjs.com/package/@xpack-dev-tools/flex/)
+  - all releases [![npm](https://img.shields.io/npm/dt/@xpack-dev-tools/flex.svg)](https://www.npmjs.com/package/@xpack-dev-tools/flex/)
 
 Credit to [Shields IO](https://shields.io) for the badges and to
 [Somsubhra/github-release-stats](https://github.com/Somsubhra/github-release-stats)
