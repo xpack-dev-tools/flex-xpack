@@ -2,8 +2,22 @@
 
 Entries in this file are in reverse chronological order.
 
+## 2023-08-18
+
+* v2.6.4-1 released
+* c6f9814 update.sh: add m4 deps for tests
+* 7b87b52 package.json: bump deps
+* d942676 package.json: bump deps
+* cea6c76 README updates
+* 47403a9 versioning.sh: xbb_set_libraries_install_path
+* bad80c4 add tests/update.sh
+* 84519c7 package.json: bump deps
+
 ## 2023-08-17
 
+* d033384 run.sh: flex_test
+* 9115479 CHANGELOG update
+* 86deb78 package.json: bump deps
 * 861aa75 READMEs updates
 * 64eda78 .vscode/settings.json: ignoreWords
 * 6a5049f README updates
