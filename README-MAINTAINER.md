@@ -208,7 +208,7 @@ For a debug build:
 xpm run build-develop-debug --config darwin-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
-The build takes a few minutes.
+The build takes about 15 minutes.
 
 When functional, push the `xpack-develop` branch to GitHub.
 
@@ -233,14 +233,14 @@ xpm install --config darwin-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 xpm run build-develop --config darwin-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
-Several minutes later, the output of the build script is a compressed
+About 10 minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
 $ ls -l ~/Work/xpack-dev-tools/flex-xpack.git/build/darwin-x64/deploy
-total 3096
--rw-r--r--  1 ilg  staff  1579537 Aug 17 07:08 xpack-flex-2.6.4-1-darwin-x64.tar.gz
--rw-r--r--  1 ilg  staff      104 Aug 17 07:08 xpack-flex-2.6.4-1-darwin-x64.tar.gz.sha
+total 816
+-rw-r--r--  1 ilg  staff  413619 Aug 17 11:04 xpack-flex-2.6.4-1-darwin-x64.tar.gz
+-rw-r--r--  1 ilg  staff     103 Aug 17 11:04 xpack-flex-2.6.4-1-darwin-x64.tar.gz.sha
 ```
 
 #### Apple Silicon macOS
@@ -266,14 +266,14 @@ xpm install --config darwin-arm64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 xpm run build-develop --config darwin-arm64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
-Several minutes later, the output of the build script is a compressed
+About 7 minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
 $ ls -l ~/Work/xpack-dev-tools/flex-xpack.git/build/darwin-arm64/deploy
-total 3072
--rw-r--r--  1 ilg  staff  1566442 Aug 17 07:08 xpack-flex-2.6.4-1-darwin-arm64.tar.gz
--rw-r--r--  1 ilg  staff      106 Aug 17 07:08 xpack-flex-2.6.4-1-darwin-arm64.tar.gz.sha
+total 816
+-rw-r--r--  1 ilg  staff  409774 Aug 17 11:01 xpack-flex-2.6.4-1-darwin-arm64.tar.gz
+-rw-r--r--  1 ilg  staff     105 Aug 17 11:01 xpack-flex-2.6.4-1-darwin-arm64.tar.gz.sha
 ```
 
 #### Intel GNU/Linux
@@ -301,14 +301,14 @@ xpm run docker-link-deps --config linux-x64 -C ~/Work/xpack-dev-tools/flex-xpack
 xpm run docker-build-develop --config linux-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
-Several minutes later, the output of the build script is a compressed
+About 5 minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
 $ ls -l ~/Work/xpack-dev-tools/flex-xpack.git/build/linux-x64/deploy
-total 1584
--rw-r--r-- 1 ilg ilg 1615614 Aug 17 04:08 xpack-flex-2.6.4-1-linux-x64.tar.gz
--rw-r--r-- 1 ilg ilg     103 Aug 17 04:08 xpack-flex-2.6.4-1-linux-x64.tar.gz.sha
+total 444
+-rw-r--r-- 1 ilg ilg 446983 Aug 17 07:59 xpack-flex-2.6.4-1-linux-x64.tar.gz
+-rw-r--r-- 1 ilg ilg    102 Aug 17 07:59 xpack-flex-2.6.4-1-linux-x64.tar.gz.sha
 ```
 
 ##### Build the Windows binaries
@@ -338,14 +338,14 @@ xpm run docker-link-deps --config linux-arm64 -C ~/Work/xpack-dev-tools/flex-xpa
 xpm run docker-build-develop --config linux-arm64 -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
-Several minutes later, the output of the build script is a compressed
+About 22 minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
 $ ls -l ~/Work/xpack-dev-tools/flex-xpack.git/build/linux-arm64/deploy
-total 1576
--rw-r--r-- 1 ilg ilg 1605729 Aug 17 04:13 xpack-flex-2.6.4-1-linux-arm64.tar.gz
--rw-r--r-- 1 ilg ilg     105 Aug 17 04:13 xpack-flex-2.6.4-1-linux-arm64.tar.gz.sha
+total 440
+-rw-r--r-- 1 ilg ilg 443276 Aug 17 08:17 xpack-flex-2.6.4-1-linux-arm64.tar.gz
+-rw-r--r-- 1 ilg ilg    104 Aug 17 08:17 xpack-flex-2.6.4-1-linux-arm64.tar.gz.sha
 ```
 
 #### Arm GNU/Linux 32-bit
@@ -371,14 +371,14 @@ xpm run docker-link-deps --config linux-arm -C ~/Work/xpack-dev-tools/flex-xpack
 xpm run docker-build-develop --config linux-arm -C ~/Work/xpack-dev-tools/flex-xpack.git
 ```
 
-Several minutes later, the output of the build script is a compressed
+About 21 minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
 $ ls -l ~/Work/xpack-dev-tools/flex-xpack.git/build/linux-arm/deploy
-total 1556
--rw-r--r-- 1 ilg ilg 1587221 Aug 17 04:13 xpack-flex-2.6.4-1-linux-arm.tar.gz
--rw-r--r-- 1 ilg ilg     103 Aug 17 04:13 xpack-flex-2.6.4-1-linux-arm.tar.gz.sha
+total 436
+-rw-r--r-- 1 ilg ilg 438504 Aug 17 08:16 xpack-flex-2.6.4-1-linux-arm.tar.gz
+-rw-r--r-- 1 ilg ilg    102 Aug 17 08:16 xpack-flex-2.6.4-1-linux-arm.tar.gz.sha
 ```
 
 ### Build a debug version
