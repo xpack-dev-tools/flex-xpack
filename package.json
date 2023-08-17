@@ -61,7 +61,7 @@
       "flex++": "./.content/bin/flex++"
     },
     "devDependencies": {
-      "@xpack-dev-tools/xbb-helper": "^1.5.2"
+      "@xpack-dev-tools/xbb-helper": "^1.7.2"
     },
     "properties": {
       "appName": "GNU flex",
