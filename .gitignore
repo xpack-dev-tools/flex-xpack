@@ -128,3 +128,21 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# added for xPack
+
+.vscode/c_cpp_properties.json
+
+# xpm
+xpacks/
+build*/
+
+/*.tgz
+
+# Windows
+Thumbs.db
+
+# macOS
+.DS_Store
+
+# end
