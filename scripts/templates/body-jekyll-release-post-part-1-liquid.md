@@ -1,5 +1,5 @@
 ---
-title:  xPack GNU bison v{{ XBB_RELEASE_VERSION }} released
+title:  xPack GNU flex v{{ XBB_RELEASE_VERSION }} released
 
 TODO: select one summary
 
@@ -7,13 +7,13 @@ summary: "Version **{{ XBB_RELEASE_VERSION }}** is a maintenance release; it fix
 
 summary: "Version **{{ XBB_RELEASE_VERSION }}** is a new release; it follows the upstream release."
 
-bison_version: "3.8.2"
-bison_date: "2021-09-25"
+flex_version: "2.6.4"
+flex_date: "May 6, 2017"
 
 version: "{{ XBB_RELEASE_VERSION }}"
 npm_subversion: "1"
 
-download_url: https://github.com/xpack-dev-tools/bison-xpack/releases/tag/v{{ XBB_RELEASE_VERSION }}/
+download_url: https://github.com/xpack-dev-tools/flex-xpack/releases/tag/v{{ XBB_RELEASE_VERSION }}/
 
 comments: true
 
@@ -22,18 +22,18 @@ date:   {{ RELEASE_DATE }}
 # For Jekyll releases selection.
 categories:
   - releases
-  - bison
+  - flex
 
 # For navigation; use scripts/createtag.sh in Jekyll.
 tags:
   - releases
-  - bison
+  - flex
 
 ---
 
-[The xPack GNU bison](https://xpack.github.io/bison/)
+[The xPack GNU flex](https://xpack.github.io/flex/)
 is a standalone cross-platform binary distribution of
-[GNU bison](https://www.gnu.org/software/bison/).
+[GNU flex](https://www.gnu.org/software/flex/).
 
 There are separate binaries for
 **macOS** (Intel 64-bit, Apple Silicon 64-bit)
@@ -60,16 +60,16 @@ The binary files are available from GitHub [Releases]({% raw %}{{ page.download_
 
 ## Install
 
-The full details of installing the **xPack GNU bison** on various platforms
+The full details of installing the **xPack GNU flex** on various platforms
 are presented in the separate
-[Install]({% raw %}{{ site.baseurl }}{% endraw %}/dev-tools/bison/install/) page.
+[Install]({% raw %}{{ site.baseurl }}{% endraw %}/dev-tools/flex/install/) page.
 
 ### Easy install
 
-The easiest way to install GNU bison is with
+The easiest way to install GNU flex is with
 [`xpm`]({% raw %}{{ site.baseurl }}{% endraw %}/xpm/)
 by using the **binary xPack**, available as
-[`@xpack-dev-tools/bison`](https://www.npmjs.com/package/@xpack-dev-tools/bison)
+[`@xpack-dev-tools/flex`](https://www.npmjs.com/package/@xpack-dev-tools/flex)
 from the [`npmjs.com`](https://www.npmjs.com) registry.
 
 With the `xpm` tool available, installing
@@ -80,7 +80,7 @@ a development dependency for a project is quite easy:
 cd my-project
 xpm init # Add a package.json if not already present
 
-xpm install @xpack-dev-tools/bison@latest --verbose
+xpm install @xpack-dev-tools/flex@latest --verbose
 
 ls -l xpacks/.bin
 ```
@@ -88,7 +88,7 @@ ls -l xpacks/.bin
 To install this specific version, use:
 
 ```sh
-xpm install @xpack-dev-tools/bison@{% raw %}{{ page.version }}.{{ page.npm_subversion }}{% endraw %} --verbose
+xpm install @xpack-dev-tools/flex@{% raw %}{{ page.version }}.{{ page.npm_subversion }}{% endraw %} --verbose
 ```
 
 It is also possible to install Meson Build globally, in the user home folder,
@@ -96,7 +96,7 @@ but this requires xPack aware tools to automatically identify them and
 manage paths.
 
 ```sh
-xpm install --global @xpack-dev-tools/bison@latest --verbose
+xpm install --global @xpack-dev-tools/flex@latest --verbose
 ```
 
 ### Uninstall
@@ -106,24 +106,24 @@ To remove the links created by xpm in the current project:
 ```sh
 cd my-project
 
-xpm uninstall @xpack-dev-tools/bison
+xpm uninstall @xpack-dev-tools/flex
 ```
 
 To completely remove the package from the central xPack store:
 
 ```sh
-xpm uninstall --global @xpack-dev-tools/bison
+xpm uninstall --global @xpack-dev-tools/flex
 ```
 
 ## Compliance
 
-The xPack GNU bison generally follows the official
-[GNU bison](https://www.gnu.org/software/bison/) releases.
+The xPack GNU flex generally follows the official
+[GNU flex](https://www.gnu.org/software/flex/) releases.
 
 The current version is based on:
 
-- GNU bison version {% raw %}{{ page.bison_version }}{% endraw %}
-from {% raw %}{{ page.bison_date }}{% endraw %}.
+- GNU flex version {% raw %}{{ page.flex_version }}{% endraw %}
+from {% raw %}{{ page.flex_date }}{% endraw %}.
 
 ## Changes
 
@@ -174,7 +174,7 @@ relative path.
 ## Documentation
 
 The original documentation is available
-[online](https://www.gnu.org/software/bison/manual/).
+[online](https://www.gnu.org/software/flex/manual/).
 
 ## Build
 
@@ -189,15 +189,15 @@ The scripts used to build this distribution are in:
 - `distro-info/scripts`
 
 For the prerequisites and more details on the build procedure, please see the
-[How to build](https://github.com/xpack-dev-tools/bison-xpack/blob/xpack/README-MAINTAINER.md) page.
+[How to build](https://github.com/xpack-dev-tools/flex-xpack/blob/xpack/README-MAINTAINER.md) page.
 
 ## CI tests
 
 Before publishing, a set of simple tests were performed on an exhaustive
 set of platforms. The results are available from:
 
-- [GitHub Actions](https://github.com/xpack-dev-tools/bison-xpack/actions/)
-- [Travis CI](https://app.travis-ci.com/github/xpack-dev-tools/bison-xpack/builds/)
+- [GitHub Actions](https://github.com/xpack-dev-tools/flex-xpack/actions/)
+- [Travis CI](https://app.travis-ci.com/github/xpack-dev-tools/flex-xpack/builds/)
 
 ## Tests
 
