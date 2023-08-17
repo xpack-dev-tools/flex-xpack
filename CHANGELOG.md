@@ -4,7 +4,10 @@ Entries in this file are in reverse chronological order.
 
 ## 2023-08-18
 
-* v2.6.4-1 released
+* v2.6.4-1.1 published on npmjs.com
+* 84f8907 README update
+* 4189766 package.json: update urls for 2.6.4-1.1 release
+* 3bfda57 CHANGELOG update
 * c6f9814 update.sh: add m4 deps for tests
 * 7b87b52 package.json: bump deps
 * d942676 package.json: bump deps
