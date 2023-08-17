@@ -110,12 +110,14 @@ $ tree -L 2 /Users/ilg/Library/xPacks/\@xpack-dev-tools/flex/2.6.4-1.1/.content/
 ├── bin
 │   ├── flex
 │   └── flex++ -> flex
-└── distro-info
-    ├── CHANGELOG.md
-    ├── licenses
-    └── scripts
-
-5 directories, 4 files
+├── distro-info
+│   ├── CHANGELOG.md
+│   ├── licenses
+│   └── scripts
+├── include
+│   └── FlexLexer.h
+└── lib
+    └── libfl.a
 ```
 
 No other files are installed in any system folders or other locations.
