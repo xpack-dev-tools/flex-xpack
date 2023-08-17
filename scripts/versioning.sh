@@ -12,14 +12,10 @@
 
 function application_build_versioned_components()
 {
-  XBB_BISON_VERSION="$(xbb_strip_version_pre_release "${XBB_RELEASE_VERSION}")"
-  if [[ "${XBB_BISON_VERSION}" =~ [0-9]+[.][0-9]+[.]0 ]]
-  then
-    XBB_BISON_VERSION="$(echo "${XBB_BISON_VERSION}" | bison -e 's|.0$||')"
-  fi
+  XBB_FLEX_VERSION="$(xbb_strip_version_pre_release "${XBB_RELEASE_VERSION}")"
 
   # Keep them in sync with the combo archive content.
-  if [[ "${XBB_RELEASE_VERSION}" =~ 3[.]8[.].*-.* ]]
+  if [[ "${XBB_RELEASE_VERSION}" =~ 2[.]6[.].*-.* ]]
   then
     # -------------------------------------------------------------------------
     # Build the native dependencies.
@@ -36,7 +32,17 @@ function application_build_versioned_components()
     xbb_set_target "requested"
 
     # https://ftp.gnu.org/pub/gnu/libiconv/
-    libiconv_build "1.17"
+    # libiconv_build "1.17"
+
+    libtool_build "2.4.7"
+
+    libunistring_build "1.1"
+
+    # autopoint required by flex autogen.sh
+    gettext_build "0.22"
+
+    # Required by flex.
+    autotools_build
 
     # -------------------------------------------------------------------------
     # Build the application binaries.
@@ -44,8 +50,12 @@ function application_build_versioned_components()
     xbb_set_executables_install_path "${XBB_APPLICATION_INSTALL_FOLDER_PATH}"
     xbb_set_libraries_install_path "${XBB_DEPENDENCIES_INSTALL_FOLDER_PATH}"
 
-    # https://ftp.gnu.org/gnu/bison/
-    bison_build "${XBB_BISON_VERSION}"
+    (
+      xbb_activate_installed_bin
+
+      # https://github.com/westes/flex/releases
+      flex_build "${XBB_FLEX_VERSION}"
+    )
 
     # -------------------------------------------------------------------------
   else

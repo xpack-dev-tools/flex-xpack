@@ -11,10 +11,10 @@
 # Application specific definitions. Included with source.
 
 # Used to display the application name.
-XBB_APPLICATION_NAME=${XBB_APPLICATION_NAME:-"GNU bison"}
+XBB_APPLICATION_NAME=${XBB_APPLICATION_NAME:-"GNU flex"}
 
 # Used as part of file/folder paths.
-XBB_APPLICATION_LOWER_CASE_NAME=${XBB_APPLICATION_LOWER_CASE_NAME:-"bison"}
+XBB_APPLICATION_LOWER_CASE_NAME=${XBB_APPLICATION_LOWER_CASE_NAME:-"flex"}
 
 XBB_APPLICATION_DISTRO_NAME=${XBB_APPLICATION_DISTRO_NAME:-"xPack"}
 XBB_APPLICATION_DISTRO_LOWER_CASE_NAME=${XBB_APPLICATION_DISTRO_LOWER_CASE_NAME:-"xpack"}
@@ -23,7 +23,7 @@ XBB_APPLICATION_DISTRO_TOP_FOLDER=${XBB_APPLICATION_DISTRO_TOP_FOLDER:-"xPacks"}
 XBB_APPLICATION_DESCRIPTION="${XBB_APPLICATION_DISTRO_NAME} ${XBB_APPLICATION_NAME}"
 
 declare -a XBB_APPLICATION_DEPENDENCIES=( )
-declare -a XBB_APPLICATION_COMMON_DEPENDENCIES=( bison libiconv )
+declare -a XBB_APPLICATION_COMMON_DEPENDENCIES=( libtool libunistring gettext autotools flex )
 
 # -----------------------------------------------------------------------------
 
