@@ -48,7 +48,9 @@ function application_build_versioned_components()
     # Build the application binaries.
 
     xbb_set_executables_install_path "${XBB_APPLICATION_INSTALL_FOLDER_PATH}"
-    xbb_set_libraries_install_path "${XBB_DEPENDENCIES_INSTALL_FOLDER_PATH}"
+    # Note: libraries are also published.
+    xbb_set_libraries_install_path "${XBB_APPLICATION_INSTALL_FOLDER_PATH}"
+    tests_add "xbb_set_libraries_install_path" "${XBB_APPLICATION_INSTALL_FOLDER_PATH}"
 
     (
       xbb_activate_installed_bin
