@@ -8,7 +8,7 @@ summary: "Version **{{ XBB_RELEASE_VERSION }}** is a maintenance release; it fix
 summary: "Version **{{ XBB_RELEASE_VERSION }}** is a new release; it follows the upstream release."
 
 flex_version: "2.6.4"
-flex_date: "May 6, 2017"
+flex_date: "6 May 2017"
 
 version: "{{ XBB_RELEASE_VERSION }}"
 npm_subversion: "1"
