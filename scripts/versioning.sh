@@ -41,6 +41,10 @@ function application_build_versioned_components()
     # autopoint required by flex autogen.sh
     gettext_build "0.22"
 
+    # Required by autotools.
+    # https://ftp.gnu.org/pub/gnu/libiconv/
+    libiconv_build "1.17" # "1.16"
+
     # Required by flex.
     autotools_build
 
