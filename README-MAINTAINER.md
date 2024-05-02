@@ -68,7 +68,7 @@ git -C ~/Work/xpack-dev-tools/flex-xpack.git pull
 ## Release schedule
 
 The xPack GNU flex release schedule generally follows the original GNU
-[releases](https://github.com/westes/flex/releases).
+[releases](https://github.com/westes/flex/releases/).
 
 ## How to make new releases
 
@@ -171,7 +171,7 @@ xpm run install -C ~/Work/xpack-dev-tools/flex-xpack.git
 git -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git pull
 xpm link -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git
 
-xpm run link-deps -C ~/Work/xpack-dev-tools/cmake-xpack.git
+xpm run link-deps -C ~/Work/xpack-dev-tools/flex-xpack.git
 
 xpm run deep-clean --config darwin-x64  -C ~/Work/xpack-dev-tools/flex-xpack.git && \
 xpm install --config darwin-x64 -C ~/Work/xpack-dev-tools/flex-xpack.git && \
