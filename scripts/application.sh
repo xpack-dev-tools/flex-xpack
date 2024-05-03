@@ -25,6 +25,8 @@ XBB_APPLICATION_DESCRIPTION="${XBB_APPLICATION_DISTRO_NAME} ${XBB_APPLICATION_NA
 declare -a XBB_APPLICATION_DEPENDENCIES=( )
 declare -a XBB_APPLICATION_COMMON_DEPENDENCIES=( libtool libunistring gettext autotools flex )
 
+XBB_APPLICATION_HAS_FLEX_PACKAGE="y"
+
 # -----------------------------------------------------------------------------
 
 XBB_GITHUB_ORG="${XBB_GITHUB_ORG:-"xpack-dev-tools"}"
