@@ -61,7 +61,8 @@ xpm link -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git
 Or, if the repo was already cloned:
 
 ```sh
-git -C ~/Work/xpack-dev-tools/flex-xpack.git pull
+git -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git pull
+xpm link -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git
 ```
 
 ## Release schedule
