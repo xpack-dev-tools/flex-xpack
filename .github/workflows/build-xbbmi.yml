@@ -19,7 +19,7 @@
 # -----------------------------------------------------------------------------
 
 
-name: 'Build xPack GNU flex xbbmi'
+name: 'Build xPack flex xbbmi'
 
 on:
   workflow_dispatch:
@@ -96,7 +96,7 @@ jobs:
         run: |
           xpm install --config darwin-x64 --loglevel ${{ github.event.inputs.xpm_install_loglevel }} ${{ github.event.inputs.xpm_install_options }}
           xpm run build --config darwin-x64
-  
+
       - name: 'Publish pre-release'
         # https://github.com/ncipollo/release-action
         uses: ncipollo/release-action@v1

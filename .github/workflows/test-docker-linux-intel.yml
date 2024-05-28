@@ -38,7 +38,7 @@
 
 # -----------------------------------------------------------------------------
 
-name: 'Test xPack GNU flex on Intel Docker platforms'
+name: 'Test xPack flex on Intel Docker platforms'
 
 on:
   workflow_dispatch:
@@ -437,5 +437,5 @@ jobs:
 
   # - https://hub.docker.com/r/gentoo/portage
   # docker://gentoo/portage - exec: "/bin/bash": stat /bin/bash: no such file or directory: unknown.
-  
+
 # -----------------------------------------------------------------------------

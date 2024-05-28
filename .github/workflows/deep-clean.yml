@@ -19,7 +19,7 @@
 # -----------------------------------------------------------------------------
 
 
-name: 'Deep clean xPack GNU flex'
+name: 'Deep clean xPack flex'
 
 on:
   workflow_dispatch:

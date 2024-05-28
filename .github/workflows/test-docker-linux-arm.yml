@@ -38,7 +38,7 @@
 
 # -----------------------------------------------------------------------------
 
-name: 'Test xPack GNU flex on Arm Docker platforms'
+name: 'Test xPack flex on Arm Docker platforms'
 
 on:
   workflow_dispatch:
@@ -455,7 +455,7 @@ jobs:
         with:
           entrypoint: /bin/bash
           args: /github/workspace/scripts/test.sh --image opensuse/tumbleweed --version ${{ github.event.inputs.version }} --base-url ${{ github.event.inputs.base_url }}
-  
+
   # https://hub.docker.com/r/arm32v7/ubuntu/
   ubuntu-arm:
     name: 'arm flex ${{ github.event.inputs.version }} test on Ubuntu stable'
@@ -675,5 +675,5 @@ jobs:
   # - https://hub.docker.com/r/arm32v7/opensuse
   # arm32v7/opensuse:latest is leap 42.3 and fails due to http: URLs
   # (zypper lr -u)
-  
+
 # -----------------------------------------------------------------------------

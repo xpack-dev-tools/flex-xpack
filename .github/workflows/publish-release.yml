@@ -19,7 +19,7 @@
 # -----------------------------------------------------------------------------
 
 
-name: 'Publish the xPack GNU flex release'
+name: 'Publish the xPack flex release'
 
 on:
   workflow_dispatch:
@@ -76,7 +76,7 @@ jobs:
           bodyFile: '.github/workflows/body-github-release.md'
           commit: 'xpack-develop'
           draft: true
-          name: 'xPack GNU flex v${{ github.event.inputs.version }}'
+          name: 'xPack flex v${{ github.event.inputs.version }}'
           omitBodyDuringUpdate: true
           omitDraftDuringUpdate: true
           omitNameDuringUpdate: true
