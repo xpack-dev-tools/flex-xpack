@@ -19,7 +19,7 @@
 # -----------------------------------------------------------------------------
 
 
-name: 'Build xPack GNU flex'
+name: 'Build xPack flex'
 
 on:
   workflow_dispatch:
