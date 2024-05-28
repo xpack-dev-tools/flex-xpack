@@ -1,7 +1,7 @@
 {
   "name": "@xpack-dev-tools/flex",
   "version": "2.6.4-1.1",
-  "description": "A binary xPack with the GNU flex executables",
+  "description": "A binary xPack with the flex executables",
   "main": "",
   "scripts": {
     "postversion": "git push origin --all && git push origin --tags",
@@ -61,10 +61,10 @@
       "flex++": "./.content/bin/flex++"
     },
     "devDependencies": {
-      "@xpack-dev-tools/xbb-helper": "^2.0.9"
+      "@xpack-dev-tools/xbb-helper": "^2.1.7"
     },
     "properties": {
-      "appName": "GNU flex",
+      "appName": "flex",
       "appLcName": "flex",
       "platforms": "linux-x64,linux-arm64,linux-arm,darwin-x64,darwin-arm64",
       "LIQUIDJS": "liquidjs --context '{ \"XBB_APPLICATION_NAME\": \"{{ properties.appName }}\", \"XBB_APPLICATION_LOWER_CASE_NAME\": \"{{ properties.appLcName }}\", \"platforms\": \"{{ properties.platforms }}\" }'",

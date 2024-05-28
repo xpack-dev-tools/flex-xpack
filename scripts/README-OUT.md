@@ -1,7 +1,7 @@
-# The xPack GNU flex
+# The xPack flex
 
-**The xPack GNU flex** is the **xPack** version of
-the **GNU flex**, an open source project.
+**The xPack flex** is the **xPack** version of
+the **flex**, an open source project.
 
 For more details, please read the corresponding release pages:
 

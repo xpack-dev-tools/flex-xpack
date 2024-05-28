@@ -67,7 +67,7 @@ xpm link -C ~/Work/xpack-dev-tools/xbb-helper-xpack.git
 
 ## Release schedule
 
-The xPack GNU flex release schedule generally follows the original GNU
+The xPack flex release schedule generally follows the original GNU
 [releases](https://github.com/westes/flex/releases/).
 
 ## How to make new releases
@@ -93,7 +93,7 @@ In the `xpack-dev-tools/flex-xpack` Git repo:
 
 ### Check the latest upstream release
 
-Check the GNU flex [releases](https://github.com/westes/flex/releases)
+Check the flex [releases](https://github.com/westes/flex/releases)
 and compare the the xPack [Releases](https://github.com/xpack-dev-tools/flex-xpack/releases/).
 
 ### Increase the version
@@ -606,7 +606,7 @@ The workflow result and logs are available from the
 The result is a
 [draft pre-release](https://github.com/xpack-dev-tools/flex-xpack/releases/)
 tagged like **v2.6.4-1** (mind the dash in the middle!) and
-named like **xPack GNU flex v2.6.4-1** (mind the dash),
+named like **xPack flex v2.6.4-1** (mind the dash),
 with all binaries attached.
 
 - edit the draft and attach it to the `xpack-develop` branch (important!)
@@ -631,7 +631,7 @@ If any, refer to closed
 ## Update the preview Web
 
 - commit the `develop` branch of `xpack/web-jekyll` GitHub repo;
-  use a message like _xPack GNU flex v2.6.4-1 released_
+  use a message like _xPack flex v2.6.4-1 released_
 - push to GitHub
 - wait for the GitHub Pages build to complete
 - the preview web is <https://xpack.github.io/web-preview/news/>
@@ -739,7 +739,7 @@ In case the previous version is not functional and needs to be unpublished:
 
 - in a separate browser windows, open [X/Twitter](https://twitter.com)
 - using the `@xpack_project` account
-- paste the release name like **xPack GNU flex v2.6.4-1 released**
+- paste the release name like **xPack flex v2.6.4-1 released**
 - paste the link to the Web page
   [release](https://xpack.github.io/flex/releases/)
 - click the **Tweet** button

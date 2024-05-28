@@ -11,7 +11,7 @@
 # Application specific definitions. Included with source.
 
 # Used to display the application name.
-XBB_APPLICATION_NAME=${XBB_APPLICATION_NAME:-"GNU flex"}
+XBB_APPLICATION_NAME=${XBB_APPLICATION_NAME:-"flex"}
 
 # Used as part of file/folder paths.
 XBB_APPLICATION_LOWER_CASE_NAME=${XBB_APPLICATION_LOWER_CASE_NAME:-"flex"}

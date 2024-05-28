@@ -1,5 +1,5 @@
 ---
-title:  xPack GNU flex v{{ XBB_RELEASE_VERSION }} released
+title:  xPack flex v{{ XBB_RELEASE_VERSION }} released
 
 TODO: select one summary
 
@@ -31,9 +31,9 @@ tags:
 
 ---
 
-[The xPack GNU flex](https://xpack.github.io/flex/)
+[The xPack flex](https://xpack.github.io/flex/)
 is a standalone cross-platform binary distribution of
-[GNU flex](https://www.gnu.org/software/flex/).
+[flex](https://www.gnu.org/software/flex/).
 
 There are separate binaries for
 **macOS** (Intel 64-bit, Apple Silicon 64-bit)
@@ -60,13 +60,13 @@ The binary files are available from GitHub [Releases]({% raw %}{{ page.download_
 
 ## Install
 
-The full details of installing the **xPack GNU flex** on various platforms
+The full details of installing the **xPack flex** on various platforms
 are presented in the separate
 [Install]({% raw %}{{ site.baseurl }}{% endraw %}/dev-tools/flex/install/) page.
 
 ### Easy install
 
-The easiest way to install GNU flex is with
+The easiest way to install flex is with
 [`xpm`]({% raw %}{{ site.baseurl }}{% endraw %}/xpm/)
 by using the **binary xPack**, available as
 [`@xpack-dev-tools/flex`](https://www.npmjs.com/package/@xpack-dev-tools/flex)
@@ -117,12 +117,12 @@ xpm uninstall --global @xpack-dev-tools/flex
 
 ## Compliance
 
-The xPack GNU flex generally follows the official
-[GNU flex](https://www.gnu.org/software/flex/) releases.
+The xPack flex generally follows the official
+[flex](https://www.gnu.org/software/flex/) releases.
 
 The current version is based on:
 
-- GNU flex version {% raw %}{{ page.flex_version }}{% endraw %}
+- flex version {% raw %}{{ page.flex_version }}{% endraw %}
 from {% raw %}{{ page.flex_date }}{% endraw %}.
 
 ## Changes

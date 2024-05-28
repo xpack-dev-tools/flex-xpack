@@ -4,9 +4,9 @@
 [![npm (scoped)](https://img.shields.io/npm/v/@xpack-dev-tools/flex.svg?color=blue)](https://www.npmjs.com/package/@xpack-dev-tools/flex/)
 [![license](https://img.shields.io/github/license/xpack-dev-tools/flex-xpack)](https://github.com/xpack-dev-tools/flex-xpack/blob/xpack/LICENSE)
 
-# The xPack GNU flex
+# The xPack flex
 
-A standalone cross-platform (macOS/Linux) **GNU flex**
+A standalone cross-platform (macOS/Linux) **flex**
 binary distribution, intended for reproducible builds.
 
 The main target is macOS 10.13, whose older version of this utility
@@ -20,29 +20,28 @@ this project also includes the build scripts.
 This open source project is hosted on GitHub as
 [`xpack-dev-tools/flex-xpack`](https://github.com/xpack-dev-tools/flex-xpack)
 and provides the platform specific binaries for the
-[xPack GNU flex](https://xpack.github.io/flex/).
+[xPack flex](https://xpack.github.io/flex/).
 
 This distribution follows the official
-[GNU flex](https://www.gnu.org/software/flex/) releases.
+[flex](https://github.com/westes/flex) releases.
 
 The binaries can be installed automatically as **binary xPacks** or manually as
 **portable archives**.
 
 ## Release schedule
 
-This distribution is generally one minor release behind the upstream releases.
-In practical terms, when the minor release number changes, it awaits a few
-more weeks to get the latest patch release.
+The xPack flex release schedule generally follows the upstream
+[releases](https://github.com/westes/flex/releases/).
 
 ## User info
 
 This section is intended as a shortcut for those who plan
-to use the GNU flex binaries. For full details please read the
-[xPack GNU flex](https://xpack.github.io/flex/) pages.
+to use the flex binaries. For full details please read the
+[xPack flex](https://xpack.github.io/flex/) pages.
 
 ### Easy install
 
-The easiest way to install GNU flex is using the **binary xPack**, available as
+The easiest way to install flex is using the **binary xPack**, available as
 [`@xpack-dev-tools/flex`](https://www.npmjs.com/package/@xpack-dev-tools/flex)
 from the [`npmjs.com`](https://www.npmjs.com) registry.
 
@@ -94,7 +93,7 @@ This location is configurable via the environment variable
 `XPACKS_STORE_FOLDER`; for more details please check the
 [xpm folders](https://xpack.github.io/xpm/folders/) page.
 
-It is also possible to install GNU flex globally, in the user home folder:
+It is also possible to install flex globally, in the user home folder:
 
 ```sh
 xpm install --global @xpack-dev-tools/flex@latest --verbose
@@ -144,7 +143,7 @@ xpm uninstall --global @xpack-dev-tools/flex
 
 ### Manual install
 
-For all platforms, the **xPack GNU flex**
+For all platforms, the **xPack flex**
 binaries are released as portable
 archives that can be installed in any location.
 
@@ -157,7 +156,7 @@ For more details please read the
 
 ### Versioning
 
-The version strings used by the GNU flex project are three number strings
+The version strings used by the flex project are three number strings
 like `2.6.4`, which looks like semver;
 to this string the xPack distribution adds a four number,
 but since semver allows only three numbers, all additional ones can
