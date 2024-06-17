@@ -61,7 +61,7 @@
       "flex++": "./.content/bin/flex++"
     },
     "devDependencies": {
-      "@xpack-dev-tools/xbb-helper": "^2.1.7"
+      "@xpack-dev-tools/xbb-helper": "^2.1.20"
     },
     "properties": {
       "appName": "flex",
