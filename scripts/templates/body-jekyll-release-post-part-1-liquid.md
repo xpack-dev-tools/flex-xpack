@@ -17,7 +17,7 @@ download_url: https://github.com/xpack-dev-tools/flex-xpack/releases/tag/v{{ XBB
 
 comments: true
 
-date:   {{ RELEASE_DATE }}
+date: {{ RELEASE_DATE }}
 
 # For Jekyll releases selection.
 categories:
