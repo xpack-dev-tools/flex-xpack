@@ -1,23 +1,23 @@
 ---
-title:  xPack flex v{{ XBB_RELEASE_VERSION }} released
+title:  xPack flex v{{releaseVersion}} released
 
 TODO: select one summary
 
-summary: "Version **{{ XBB_RELEASE_VERSION }}** is a maintenance release; it fixes <...>."
+summary: "Version **{{releaseVersion}}** is a maintenance release; it fixes ..."
 
-summary: "Version **{{ XBB_RELEASE_VERSION }}** is a new release; it follows the upstream release."
+summary: "Version **{{releaseVersion}}** is a new release; it follows the upstream release."
 
 flex_version: "2.6.4"
 flex_date: "6 May 2017"
 
-version: "{{ XBB_RELEASE_VERSION }}"
+version: "{{releaseVersion}}"
 npm_subversion: "1"
 
-download_url: https://github.com/xpack-dev-tools/flex-xpack/releases/tag/v{{ XBB_RELEASE_VERSION }}/
+download_url: https://github.com/xpack-dev-tools/flex-xpack/releases/tag/v{{releaseVersion}}/
 
 comments: true
 
-date: {{ RELEASE_DATE }}
+date: {{releaseDate}}
 
 # For Jekyll releases selection.
 categories:
@@ -45,7 +45,7 @@ armv6 is not supported)." %}{% endraw %}
 
 ## Download
 
-The binary files are available from GitHub [Releases]({% raw %}{{ page.download_url }}{% endraw %}).
+The binary files are available from GitHub [Releases]({% raw %}{{page.download_url}}{% endraw %}).
 
 ## Prerequisites
 
@@ -62,12 +62,12 @@ The binary files are available from GitHub [Releases]({% raw %}{{ page.download_
 
 The full details of installing the **xPack flex** on various platforms
 are presented in the separate
-[Install]({% raw %}{{ site.baseurl }}{% endraw %}/dev-tools/flex/install/) page.
+[Install]({% raw %}{{site.baseurl}}{% endraw %}/dev-tools/flex/install/) page.
 
 ### Easy install
 
 The easiest way to install flex is with
-[`xpm`]({% raw %}{{ site.baseurl }}{% endraw %}/xpm/)
+[`xpm`]({% raw %}{{site.baseurl}}{% endraw %}/xpm/)
 by using the **binary xPack**, available as
 [`@xpack-dev-tools/flex`](https://www.npmjs.com/package/@xpack-dev-tools/flex)
 from the [`npmjs.com`](https://www.npmjs.com) registry.
@@ -88,7 +88,7 @@ ls -l xpacks/.bin
 To install this specific version, use:
 
 ```sh
-xpm install @xpack-dev-tools/flex@{% raw %}{{ page.version }}.{{ page.npm_subversion }}{% endraw %} --verbose
+xpm install @xpack-dev-tools/flex@{% raw %}{{page.version}}.{{page.npm_subversion}}{% endraw %} --verbose
 ```
 
 It is also possible to install Meson Build globally, in the user home folder,
@@ -122,8 +122,8 @@ The xPack flex generally follows the official
 
 The current version is based on:
 
-- flex version {% raw %}{{ page.flex_version }}{% endraw %}
-from {% raw %}{{ page.flex_date }}{% endraw %}.
+- flex version {% raw %}{{page.flex_version}}{% endraw %}
+from {% raw %}{{page.flex_date}}{% endraw %}.
 
 ## Changes
 
