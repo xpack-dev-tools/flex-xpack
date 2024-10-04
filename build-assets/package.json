@@ -17,7 +17,8 @@
         "programName": "flex",
         "branding": "flex ",
         "$link": "https://github.com/westes/flex/releases/",
-        "flexReleaseDate": "6 May 2017"
+        "flexReleaseDate": "6 May 2017",
+        "isSecondaryTool": "true"
       },
       "buildFolderRelativePath": "{{ 'build' | path_join: configuration.name | to_filename | downcase }}",
       "buildFolderRelativePathPosix": "{{ 'build' | path_posix_join: configuration.name | downcase }}",
