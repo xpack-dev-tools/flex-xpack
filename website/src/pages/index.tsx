@@ -41,8 +41,8 @@ function HomepageHeader() {
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from xPack Binary Development Tools`}
+    <Layout 
+      title={`Hello from flex`}
       description="A binary package with the flex executables">
       <HomepageHeader />
       <main>
