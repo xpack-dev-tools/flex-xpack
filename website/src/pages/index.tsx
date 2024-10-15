@@ -42,7 +42,7 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout 
-      title={`Welcome to flex`}
+      title="Welcome!"
       description="A binary package with the flex executables">
       <HomepageHeader />
       <main>
