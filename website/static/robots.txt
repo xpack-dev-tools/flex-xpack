@@ -1,0 +1,7 @@
+Sitemap: https://xpack-dev-tools.github.io/flex-xpack/sitemap.xml
+
+User-agent: *
+Disallow: /flex-xpack/blog/archive/
+Disallow: /flex-xpack/blog/authors/
+Disallow: /flex-xpack/blog/page/
+Disallow: /flex-xpack/blog/tags/
