@@ -89,7 +89,8 @@ console.log('customFields: ' + util.inspect(customFields));
 // ----------------------------------------------------------------------------
 
 const config: Config = {
-  title: 'xPack flex',
+  title: 'xPack flex' +
+    ((process.env.DOCUSAURUS_IS_PREVIEW === 'true') ? ' (preview)' : ''),
   tagline: 'A binary distribution of flex',
   // Explicitly set in headTags.
   // favicon: '/img/favicon.ico',
@@ -260,7 +261,7 @@ const config: Config = {
       items: [
         {
           to: '/',
-          // label: 'Home',
+          label: 'flex',
           className: 'header-home-link',
           position: 'left'
         },
