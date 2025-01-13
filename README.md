@@ -5,8 +5,7 @@
 
 # The xPack flex
 
-A standalone cross-platform (Windows, macOS, GNU/Linux)
-binary distribution of flex,
+A standalone, cross-platform (GNU/Linux, macOS) binary distribution of flex,
 intended for reproducible builds.
 
 ## Project documentation
