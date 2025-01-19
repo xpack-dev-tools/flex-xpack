@@ -56,7 +56,15 @@
       "last 5 safari version"
     ]
   },
-  "websiteConfig": {},
+  "websiteConfig": {
+    "customFields": {
+      "programName": "flex",
+      "branding": "flex ",
+      "$link": "https://github.com/westes/flex/releases/",
+      "flexReleaseDate": "6 May 2017",
+      "isSecondaryTool": "true"
+    }
+  },
   "engines": {
     "node": ">=18.0"
   }
