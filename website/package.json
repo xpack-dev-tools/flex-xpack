@@ -57,13 +57,11 @@
     ]
   },
   "websiteConfig": {
-    "customFields": {
-      "programName": "flex",
-      "branding": "flex ",
-      "$link": "https://github.com/westes/flex/releases/",
-      "flexReleaseDate": "6 May 2017",
-      "isSecondaryTool": "true"
-    }
+    "programName": "flex",
+    "branding": "flex ",
+    "isSecondaryTool": "true",
+    "$link": "https://github.com/westes/flex/releases/",
+    "flexReleaseDate": "6 May 2017"
   },
   "engines": {
     "node": ">=18.0"
