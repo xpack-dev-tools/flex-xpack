@@ -246,7 +246,7 @@ The command to install the **latest** available version of **flex** is:
 To install a **specific version**, specify it explicitly:
 
 <CodeBlock language="sh"> {
-`xpm install @xpack-dev-tools/flex@${customField('releaseVersion')} --verbose
+`xpm install @xpack-dev-tools/flex@2.6.4-1.1 --verbose
 `} </CodeBlock>
 
 <Tabs groupId="operating-systems">
@@ -349,7 +349,7 @@ The result looks like this:
     "dependencies": {},
     "devDependencies": {
       "@xpack-dev-tools/flex": {
-        "specifier": "${customField('xpackVersion')}.${customField('npmSubversion')}",
+        "specifier": "2.6.4-1.1",
         "local": "link",
         "platforms": "all"
       }
@@ -405,7 +405,7 @@ the project build configurations need a PATH adjustment:
 <TabItem value="macos" label="macOS">
 
 <CodeBlock language="sh"> {
-`export PATH=$HOME/Library/xPacks/\@pack-dev-tools/flex/${customField('xpackVersion')}.${customField('npmSubversion')}/.content/bin:$PATH
+`export PATH=$HOME/Library/xPacks/\@pack-dev-tools/flex/2.6.4-1.1/.content/bin:$PATH
 `} </CodeBlock>
 
 </TabItem>
@@ -413,7 +413,7 @@ the project build configurations need a PATH adjustment:
 <TabItem value="linux" label="GNU/Linux">
 
 <CodeBlock language="sh"> {
-`export PATH=$HOME/.local/xPacks/@xpack-dev-tools/flex/${customField('xpackVersion')}.${customField('npmSubversion')}/.content/bin:$PATH
+`export PATH=$HOME/.local/xPacks/@xpack-dev-tools/flex/2.6.4-1.1/.content/bin:$PATH
 `} </CodeBlock>
 
 </TabItem>
@@ -503,8 +503,8 @@ are packed as `.tar.gz` archives.
 Download the latest version named like:
 
 <ul>
-<li><code>xpack-flex-{customField('xpackVersion')}-darwin-x64.tar.gz</code></li>
-<li><code>xpack-flex-{customField('xpackVersion')}-darwin-arm64.tar.gz</code></li>
+<li><code>xpack-flex-2.6.4-1-darwin-x64.tar.gz</code></li>
+<li><code>xpack-flex-2.6.4-1-darwin-arm64.tar.gz</code></li>
 </ul>
 
 :::note
@@ -519,14 +519,14 @@ unpack the archive and move it to a location of your choice.
 
 The recommended location is
 the <code>~/Library/xPacks/flex</code> folder, for
-example <code>/Users/ilg/Library/xPacks/flex/xpack-flex-{customField('xpackVersion')}</code>:
+example <code>/Users/ilg/Library/xPacks/flex/xpack-flex-2.6.4-1</code>:
 
 <CodeBlock language="console"> {
 `mkdir -p ~/Library/xPacks/flex
 cd ~/Library/xPacks/flex
 
-tar xvf ~/Downloads/xpack-flex-${customField('xpackVersion')}-darwin-x64.tar.gz
-chmod -R -w xpack-flex-${customField('xpackVersion')}
+tar xvf ~/Downloads/xpack-flex-2.6.4-1-darwin-x64.tar.gz
+chmod -R -w xpack-flex-2.6.4-1
 `} </CodeBlock>
 
 </TabItem>
@@ -538,9 +538,9 @@ are packed as `.tar.gz` archives.
 Download the latest version named like:
 
 <ul>
-<li><code>xpack-flex-{customField('xpackVersion')}-linux-x64.tar.gz</code></li>
-<li><code>xpack-flex-{customField('xpackVersion')}-linux-arm64.tar.gz</code></li>
-<li><code>xpack-flex-{customField('xpackVersion')}-linux-arm.tar.gz</code></li>
+<li><code>xpack-flex-2.6.4-1-linux-x64.tar.gz</code></li>
+<li><code>xpack-flex-2.6.4-1-linux-arm64.tar.gz</code></li>
+<li><code>xpack-flex-2.6.4-1-linux-arm.tar.gz</code></li>
 </ul>
 
 :::note
@@ -555,14 +555,14 @@ unpack the archive and move it to a location of your choice.
 
 The recommended location is
 the <code>~/.local/xPacks/flex</code> folder, for
-example <code>/home/ilg/.local/xPacks/flex/xpack-flex-{customField('xpackVersion')}</code>:
+example <code>/home/ilg/.local/xPacks/flex/xpack-flex-2.6.4-1</code>:
 
 <CodeBlock language="console"> {
 `mkdir -p ~/.local/xPacks/flex
 cd ~/.local/xPacks/flex
 
-tar xvf ~/Downloads/xpack-flex-${customField('xpackVersion')}-linux-x64.tar.gz
-chmod -R -w xpack-flex-${customField('xpackVersion')}
+tar xvf ~/Downloads/xpack-flex-2.6.4-1-linux-x64.tar.gz
+chmod -R -w xpack-flex-2.6.4-1
 `} </CodeBlock>
 
 </TabItem>
