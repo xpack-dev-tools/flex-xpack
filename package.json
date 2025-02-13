@@ -51,10 +51,6 @@
           "fileName": "xpack-flex-2.6.4-1-linux-arm64.tar.gz",
           "sha256": "356493f256c68a7fb371ff2dd7d0795d799b9becbc1c5cc3ca3e50efb7952ae9"
         },
-        "linux-arm": {
-          "fileName": "xpack-flex-2.6.4-1-linux-arm.tar.gz",
-          "sha256": "f58f75328b2adac7e7004460d68df5a0a900928d692481f814db0a61a0da1996"
-        },
         "linux-x64": {
           "fileName": "xpack-flex-2.6.4-1-linux-x64.tar.gz",
           "sha256": "131fcc0a59a0bdc56c15754d3e8d7d570e003b8cd28eeea391ec0fe20b4c8616"
