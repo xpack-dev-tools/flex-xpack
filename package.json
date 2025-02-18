@@ -33,7 +33,7 @@
   },
   "license": "MIT",
   "xpack": {
-    "minimumXpmRequired": "0.16.3",
+    "minimumXpmRequired": "0.20.5",
     "binaries": {
       "destination": "./.content",
       "baseUrl": "https://github.com/xpack-dev-tools/flex-xpack/releases/download/v2.6.4-1",
@@ -57,7 +57,7 @@
         }
       }
     },
-    "bin": {
+    "executables": {
       "flex": "./.content/bin/flex",
       "flex++": "./.content/bin/flex++"
     }
