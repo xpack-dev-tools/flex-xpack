@@ -68,8 +68,9 @@
     "liquidjs": "^10.19.1"
   },
   "topConfig": {
-    "longName": "flex",
-    "shortName": "flex"
+    "descriptiveName": "flex",
+    "permalinkName": "flex",
+    "useSelfHostedRunners": "true"
   },
   "engines": {
     "node": " >=18.0.0"
