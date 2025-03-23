@@ -76,7 +76,8 @@
     "branding": "flex ",
     "isSecondaryTool": "true",
     "$link": "https://github.com/westes/flex/releases/",
-    "flexReleaseDate": "6 May 2017"
+    "flexReleaseDate": "6 May 2017",
+    "shareOnTwitter": "true"
   },
   "engines": {
     "node": ">=18.0"
