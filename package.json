@@ -70,6 +70,7 @@
   "topConfig": {
     "descriptiveName": "flex",
     "permalinkName": "flex",
+    "skipCiTests": "true",
     "useSelfHostedRunners": "true"
   },
   "engines": {
