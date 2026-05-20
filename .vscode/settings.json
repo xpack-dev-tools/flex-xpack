@@ -1,35 +1,28 @@
 {
-    "cSpell.ignoreWords": [
-        "Ionescu",
-        "LIQUIDJS",
-        "Liviu",
-        "Somsubhra",
-        "aarch",
-        "armv",
-        "caffeinate",
-        "cleanups",
-        "createtag",
-        "endraw",
-        "ilegeul",
-        "libexec",
-        "liquidjs",
-        "loglevel",
-        "npmignore",
-        "npmjs",
-        "patchelf",
-        "postversion",
-        "readelf",
-        "rpath",
-        "runpath",
-        "userdel",
-        "wksi",
-        "workdir",
-        "xattr",
-        "xbbla",
-        "xbbli",
-        "xbbma",
-        "xbbmi",
-        "xpack",
-        "xpacks"
-    ]
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "files.associations": { "*.json": "jsonc" },
+  "editor.stablePeek": true,
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/node_modules/*/**": true,
+    "**/build/**": true
+  },
+  "C_Cpp.intelliSenseExclude": {
+    "**/build-assets": true,
+    "**/website": true,
+    "**/node_modules": true,
+    "**/xpacks": true
+  },
+  "markdownlint.config": {
+    "MD041": false
+  },
+  "spellright.language": [
+    "en_GB"
+  ],
+  "spellright.notificationClass": "warning",
+  "cSpell.language": "en-GB",
+  "cSpell.ignoreWords": []
 }

@@ -1,0 +1,8 @@
+{
+  "descriptiveName": "xPack flex",
+  "permalinkName": "flex",
+  "preferredName": "xPack flex",
+  "upstreamDescriptiveName": "flex",
+  "skipCiTests": true,
+  "useSelfHostedRunners": true
+}
